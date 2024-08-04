@@ -17,6 +17,5 @@ $(function(){
 
     }
 
-    getRandomAdvice();
     diceButton.on('click', getRandomAdvice);
 });
