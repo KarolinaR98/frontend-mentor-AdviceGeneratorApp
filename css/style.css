@@ -1,0 +1,95 @@
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: var(--dark-blue);
+}
+
+.container{
+    background-color: var(--dark-grayish-blue);
+    text-align: center;
+    width: 50%;
+    min-width: 500px;
+    padding: 30px 30px 0;
+    border-radius: 20px;
+}
+
+p.advice-number{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 15px 0;
+}
+
+p.advice{
+    color: var(--light-cyan);
+    font-size: 28px;
+    padding: 15px 0;
+}
+
+.pattern-divider{
+    height: 50px;
+    background-image: url(/images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dice-btn{
+    position: relative;
+    bottom: -25px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.dice-btn:hover{
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.dice-btn img{
+    display: block;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 576px) {
+
+    main{
+        height: auto;
+        margin-top: 30%;
+    }
+    
+    .container{
+        width: 95%;
+        min-width: auto;
+    }
+
+    .pattern-divider{
+        background-image: url(/images/pattern-divider-mobile.svg);
+    }
+}
